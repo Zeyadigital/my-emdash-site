@@ -4,6 +4,10 @@
 	"main": "./src/worker.ts",
 	"compatibility_date": "2026-02-24",
 	"compatibility_flags": ["nodejs_compat"],
+"observability": {
+    "logs": {
+      "enabled": false,
+      "invocation_logs": true}.
 	"d1_databases": [
 		{
 			"binding": "DB",
@@ -16,6 +20,8 @@
 			"bucket_name": "my-emdash-media","preview_bucket_name": "my-emdash-media",
 		},
 	],
+
+
 	// Sandboxed plugins require Worker Loader, available on Workers paid plans. Uncomment to enable:
 	 "worker_loaders": [{ "binding": "LOADER" }],
 	// General maintenance cron trigger
