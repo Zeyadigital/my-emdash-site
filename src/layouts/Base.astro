@@ -122,6 +122,13 @@ const year = new Date().getFullYear();
 			title={`${siteTitle} RSS Feed`}
 			href="/rss.xml"
 		/>
+<script is:inline>
+	/* Announcement Bar: shows the bar you set up in the admin. */
+	fetch("/_emdash/api/plugins/r_fot3n5oy4bscnpaz/config").then(function (r) { return r.json(); }).then(function (j) {
+		if (!j || !j.data || !j.data.script) return;
+		var s = document.createElement("script"); s.text = j.data.script; document.head.appendChild(s);
+	}).catch(function () {});
+</script>
 		<script is:inline>
 			// Apply an explicit theme choice immediately to prevent flash.
 			// With no cookie, color-scheme: light dark follows the OS.
